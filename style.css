@@ -10,21 +10,45 @@ header {
 }
 
 h1 {
-    font-size: 35px
+    font-size: 35px;
+    margin-bottom: 0;
 }
 
 section {
-    display:block
-    
+    display:block;
+    margin-bottom: 0;
+    max-width: 1024px;
+    width: 100%;
 }
 
 .card {
     display: inline-block;
     margin: 10px;
     padding: 5px;
+    border: 1px solid #000;
+    vertical-align: top;
+    max-height: 100%;
 }
 
 .card img {
-    height: 300px;
-    width: 300 px;
+    height: 200px;
+    width: 250 px;
+    padding: 2px;
 }
+
+.card details {
+    width: 300px;
+    height: auto;
+    display: block;
+    padding: 2px;
+  }
+
+  .card details summary {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .card details p {
+    padding: 0 10px;
+  }
+  
