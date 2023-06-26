@@ -15,7 +15,7 @@ function carregaDicionario() {
     },
     nota03: {
       titulo: "Avexar",
-      iamgem:
+      imagem:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRQpGP755CkRYBc0l43GJFMzrO03kZetrceQ&usqp=CAU",
       descricao: "Apressar, aperriar",
     },
@@ -77,7 +77,24 @@ function carregaDicionario() {
     },
   };
 
-  console.log(verbetes);
+  let content = document.getElementById("content");
+
+  for (let nota in verbetes) {
+    content.innerHTML +=
+      '<div class="card">' +
+      '<img src="' +
+      verbetes[nota].imagem +
+      '"/>' +
+      "<details>" +
+      "<summary>" +
+      verbetes[nota].titulo +
+      "</summary>" + 
+      "<p>" + 
+      verbetes[nota].descricao + 
+      "</p>" +
+      "</details>" + 
+      "</div>";
+  }
 }
 
 carregaDicionario();
